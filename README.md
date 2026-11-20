@@ -16,8 +16,11 @@ Llevar a cabo una solución de Big Data a través de Databricks aplicando la arq
 
 # 	RELACION BENEFICIO/ COSTO
 Tener la visualización de la información casi que en tiempo real nos Permite:
-Almacén: revisar salida y entrada de repuestos, ver el comportamiento de la facturacion y hacer mejor control a los proveedores.
-Taller:
+Almacén: Revisar salida y entrada de repuestos, ver el comportamiento de la facturacion y hacer mejor control a los proveedores.
+Taller: Visualizar y llevar el control de la facturación de la mano de obra por mecánico, poder comparar los costos con los históricos cuando se tercerizaba los trabajos vs con los Mecánicos Propios.
+Flota: Hacer seguimiento al gasto de los vehículos, por sistemas, por cantidad de ingresos a taller y numero de horas, comparar los mantenimientos correctivos vs los preventivos.
+
+ Todo esto anteriormente con un Software contable y el ERP de mantenimiento no se podía hacer, lo que en la actualidad representa información valiosa para hacer seguimiento al negocio y tomar decisiones en el momento oportuno.
 
 # PIPELINE DE INGESTA DE DATOS
 Se realiza una API mediante el genie para que extraiga la información de la nube cloudfleet y tener una data actualizada todos los días
