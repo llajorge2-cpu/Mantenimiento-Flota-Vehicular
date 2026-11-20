@@ -10,3 +10,11 @@ Objetivos Especificos
 
 Combinar data semiestructurada de históricos de mantenimientos realizados que reposan en archivos de Excel con la data que proviene de la nuve
 assasasassas
+
+
+
+
+
+
+
+# PIPELINE DE INGESTA DE DATOS
