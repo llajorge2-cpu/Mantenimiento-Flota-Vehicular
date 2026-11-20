@@ -20,8 +20,8 @@ Almacén: revisar salida y entrada de repuestos, ver el comportamiento de la fac
 Taller:
 
 # PIPELINE DE INGESTA DE DATOS
-Ingesta CloudFleet (notebook): 
-token nunca en texto plano, descarga paginada por ventanas de máximo 6 meses y respeto del rate limit del API:
+Se realiza una API mediante el genie para que extraiga la información de la nube cloudfleet y tener una data actualizada todos los días
 
-![01_pipeline_bronze](01_pipeline_bronze.png)
+![03_ingesta_cloudfleet](03_ingesta_cloudfleet.png)
+Cada orden se normaliza al esquema unificado (desglose totalCostLabors/totalCostParts → precio_mano_obra/precio_repuestos) y se carga con MERGE idempotente; las órdenes anuladas se eliminan:
 
