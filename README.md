@@ -55,13 +55,19 @@ Datos recreados (muestra parcial).** Fragmento de `mantenimiento_unificado` con 
 
 Metodología.** En lugar de un modelo de ML, este proyecto aplica análisis descriptivo con validación continua. Cada requisito seguía el ciclo: **especificar** (criterio de aceptación con valor esperado) → **implementar** (Genie genera SQL/datasets/widgets) → **validar** (consulta SQL de reconciliación) → **corregir** (diagnóstico de causa raíz si el test fallaba).
 
-```mermaid
+mermaid
 flowchart LR
-    A["1. Especificar"] --> B["2. Implementar con Genie"]
+    A["1. Especificar"] --> 
+    
+    B["2. Implementar con Genie"]
+    
     B --> C{"3. Validar"}
+    
     C -->|"❌"| D["4. Corregir"] --> B
+    
     C -->|"✅"| E["Entregable verificado"] -.-> A
-````**Paso 18 — Construcción de los KPIs gold.** **Fragmento** de la vista materializada del resumen mensual:
+    
+Construcción de los KPIs gold.** **Fragmento** de la vista materializada del resumen mensual:
 
 ![05_pipeline_gold](05_pipeline_gold.png)
 
