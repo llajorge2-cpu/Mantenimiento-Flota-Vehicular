@@ -23,3 +23,5 @@ Taller:
 Ingesta CloudFleet (notebook): 
 token nunca en texto plano, descarga paginada por ventanas de máximo 6 meses y respeto del rate limit del API:
 
+![01_pipeline_bronze](01_pipeline_bronze.png)
+
