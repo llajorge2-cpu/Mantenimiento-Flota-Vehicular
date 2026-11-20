@@ -86,10 +86,9 @@ Resultados de las validaciones:**
 
 Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): (1) regex del motor de dashboards clasificaba mal a los mecánicos; (2) caché rezagado de datasets tras recargas masivas; (3) columna `mes` nula en el MERGE de líneas; (4) 124 vehículos propios falsos; (5) AUTOLARTE invisible desde octubre por atribución por orden en vez de por línea.
 
-# Lineage
-
-Trazabilidad.** Se utilizó el Lineage de Unity Catalog para verificar la trazabilidad desde las tablas bronze hasta los tableros, garantizando gobernanza y auditoría del ciclo de vida del dato.
-
 ![07_pipeline_arbol](07_pipeline_arbol.png)
+
+![trabajos y repuestos](trabajos.png)
+
 
 
