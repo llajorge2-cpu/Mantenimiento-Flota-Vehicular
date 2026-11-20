@@ -90,3 +90,6 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
 Trazabilidad.** Se utilizó el Lineage de Unity Catalog para verificar la trazabilidad desde las tablas bronze hasta los tableros, garantizando gobernanza y auditoría del ciclo de vida del dato.
 
+![07_pipeline_arbol](07_pipeline_arbol.png)
+
+
