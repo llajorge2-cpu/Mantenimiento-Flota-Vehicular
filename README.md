@@ -90,7 +90,7 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
 # APP O VISUALICACIONES 
 
- # DASHBOARD - DATABRICKS
+ # TABLERO - DATABRICKS
  
 
 
