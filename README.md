@@ -1,6 +1,6 @@
 # Mantenimiento-Flota-Vehicular
-Jose Vicente Iguaran
-Jorge Eduardo Acosta Llanos
+- Jose Vicente Iguaran
+- Jorge Eduardo Acosta Llanos
 
 # 	CASO DEL NEGOCIO
 Una empresa de transportes de pasajeros tiene un parque automotor de buses en los cuales hay vehículos flota propia y vehículos de afiliados donde el mantenimiento esta a cargo toda un área de mantenimiento en cabeza de un ingeniero mecánico, se cuenta con un patio taller con mecánicos y un almacén.
