@@ -51,3 +51,36 @@ Datos recreados (muestra parcial).** Fragmento de `mantenimiento_unificado` con 
 
 *(Muestra truncada. En 4 órdenes el total difiere de M.O. + repuestos por ajustes a nivel de orden en CloudFleet — detectado por las validaciones.)
 
+# MODELADO ANALÍTICO Y VALIDACIÓN (SPEC-DRIVEN) CON GENIE
+
+Metodología.** En lugar de un modelo de ML, este proyecto aplica análisis descriptivo con validación continua. Cada requisito seguía el ciclo: **especificar** (criterio de aceptación con valor esperado) → **implementar** (Genie genera SQL/datasets/widgets) → **validar** (consulta SQL de reconciliación) → **corregir** (diagnóstico de causa raíz si el test fallaba).
+
+```mermaid
+flowchart LR
+    A["1. Especificar"] --> B["2. Implementar con Genie"]
+    B --> C{"3. Validar"}
+    C -->|"❌"| D["4. Corregir"] --> B
+    C -->|"✅"| E["Entregable verificado"] -.-> A
+````**Paso 18 — Construcción de los KPIs gold.** **Fragmento** de la vista materializada del resumen mensual:
+
+![05_pipeline_gold](05_pipeline_gold.png)
+
+Prueba de la capa gold.** La suma de órdenes de los KPIs debía igualar el conteo de la fuente (2.737). **Fragmento del test**:
+
+![06_validacion_gold](06_validacion_gold.png)
+
+Resultados de las validaciones:**
+
+| Regla (spec) | Resultado del test |
+| --- | --- |
+| Excluir órdenes voided | OK — 0 filas anuladas en KPIs |
+| Flota propia según Parque Automotor | 78 propios ($777,3M) / 80 afiliados ($111,3M) — corrigió 124 falsos propios |
+| precio_total = M.O. + repuestos | EXACTO en 100 órdenes de afiliados (0 descuadres) |
+| Unificación AUTOLARTE | OK — ~$622,9M consolidados |
+
+Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): (1) regex del motor de dashboards clasificaba mal a los mecánicos; (2) caché rezagado de datasets tras recargas masivas; (3) columna `mes` nula en el MERGE de líneas; (4) 124 vehículos propios falsos; (5) AUTOLARTE invisible desde octubre por atribución por orden en vez de por línea.
+
+# Lineage
+
+Trazabilidad.** Se utilizó el Lineage de Unity Catalog para verificar la trazabilidad desde las tablas bronze hasta los tableros, garantizando gobernanza y auditoría del ciclo de vida del dato.
+
