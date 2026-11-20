@@ -88,7 +88,24 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
 ![07_pipeline_arbol](07_pipeline_arbol.png)
 
-![trabajos y repuestos](trabajos.png)
+# APP O VISUALICACIONES 
+
+ # DASHBOARD DATABRICKS
+
+![Indicadores_general](Indicadores_general.png)
+
+![Facturacion_taller](Facturacion_taller.png)
+
+![Dashboard_gerencial](Dashboard_gerencialr.png)
+
+Visualización:
+Se desarrollaron varias Dashboard con la finalidad de tener control de los diferentes indicadores del área de mantenimiento.
+Estos Dashboard nos permiten:
+. Tener el control y las metricas de los diferentes procesos del taller para la tomas de decisiones 
+. Conocer los diferentes indicadores que se tienen en la área para tener un control completo.
+. Tambien tenemos un tablero que nos permite conocer y evidenciar la facturación general que se le realiza a los vehículos afiliados de la empresa y de esta manera conocer el ticket promedio de facturación.
+
+
 
 
 
