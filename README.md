@@ -94,16 +94,36 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
 ![Indicadores_general](Indicadores_general.png)
 
+
+
+
 ![Facturacion_taller](Facturacion_taller.png)
 
-![Dashboard_gerencial](Dashboard_gerencialr.png)
+
+
+
+
+![Dashboard_gerencial](Dashboard_gerencial.png)
+
+
+
+
+
 
 Visualización:
-Se desarrollaron varias Dashboard con la finalidad de tener control de los diferentes indicadores del área de mantenimiento.
-Estos Dashboard nos permiten:
-. Tener el control y las metricas de los diferentes procesos del taller para la tomas de decisiones 
-. Conocer los diferentes indicadores que se tienen en la área para tener un control completo.
-. Tambien tenemos un tablero que nos permite conocer y evidenciar la facturación general que se le realiza a los vehículos afiliados de la empresa y de esta manera conocer el ticket promedio de facturación.
+
+Se desarrollaron diversos dashboards de gestión con el objetivo de fortalecer el control y seguimiento de los indicadores del área de mantenimiento. 
+
+Estas herramientas permiten:
+
+ . Monitorear las métricas y el desempeño de los diferentes procesos del taller, facilitando la toma de decisiones basada en información actualizada y confiable.
+
+ . Consolidar y visualizar los principales indicadores de gestión del área, garantizando un control integral de la operación y el cumplimiento de los objetivos establecidos.
+
+ . Contar con un tablero especializado para el seguimiento de la facturación general de los vehículos afiliados a la empresa, permitiendo analizar el comportamiento de los ingresos, identificar tendencias y determinar el ticket promedio de facturación.
+
+Gracias a estos dashboards, se mejora la visibilidad de la información, se optimiza el análisis de resultados y se fortalece la gestión operativa y administrativa del área de mantenimiento.
+
 
 
 
