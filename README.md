@@ -20,8 +20,17 @@ Almacén: revisar salida y entrada de repuestos, ver el comportamiento de la fac
 Taller:
 
 # PIPELINE DE INGESTA DE DATOS
-Se realiza una API mediante el genie para que extraiga la información de la nube cloudfleet y tener una data actualizada todos los días
+Se perfiló cada Excel antes de cargar (hojas, esquemas, conteos, rangos de fechas, estados de proceso), descubriendo que 452 filas carecían de número de orden (todas con valor 0) y que el histórico no desglosa mano de obra ni repuestos.
+
+Carga bronze desde Excel** con `read_files(format => 'excel', ...)`, normalizando los nombres de columna a snake_case.
+
+Ingesta del API de CloudFleet.** El token se almacena en Databricks Secrets (nunca en texto plano); la descarga es paginada por ventanas de máximo 6 meses y respeta el límite de 30 peticiones/minuto.
 
 ![03_ingesta_cloudfleet](03_ingesta_cloudfleet.png)
-Cada orden se normaliza al esquema unificado (desglose totalCostLabors/totalCostParts → precio_mano_obra/precio_repuestos) y se carga con MERGE idempotente; las órdenes anuladas se eliminan:
+
+Cada orden se normaliza al esquema unificado y se persiste con MERGE por clave (`CF-<número de orden>`); las órdenes anuladas se eliminan para no contaminar los KPIs
+
+![04_merge_voided](04_merge_voided.png)
+
+
 
