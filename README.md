@@ -92,18 +92,21 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
  # DASHBOARD DATABRICKS
 
+
+
+![Dashboard_gerencial](Dashboard_gerencial.png)
+
+
+
+
+
 ![Indicadores_general](Indicadores_general.png)
 
 
 
 
+
 ![Facturacion_taller](Facturacion_taller.png)
-
-
-
-
-
-![Dashboard_gerencial](Dashboard_gerencial.png)
 
 
 
