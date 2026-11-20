@@ -38,5 +38,16 @@ Cada orden se normaliza al esquema unificado y se persiste con MERGE por clave (
 
 ![04_merge_voided](04_merge_voided.png)
 
+Un job ejecuta la ingesta y el recálculo de los KPIs gold diariamente a las 6:00 AM (America/Bogota), sin intervención manual.
 
+Validación de la ingesta.** Cobertura de líneas por mes: nov 100% (167/167), oct 96,7%, sep 98,6%; reconciliación líneas vs. totales de orden: 936/940 exactas.
+Datos recreados (muestra parcial).** Fragmento de `mantenimiento_unificado` con el desglose mano de obra / repuestos:
+
+| orden | interno | tipo | M.O. | repuestos | total | fecha |
+| --- | --- | --- | --- | --- | --- | --- |
+| 963 | 8256 | PREVENTIVO | 37.500 | 0 | 333.699 | 2026-11-12 |
+| 960 | 5505 | PREVENTIVO | 37.500 | 0 | 177.749 | 2026-11-12 |
+| 961 | 5599 | PREVENTIVO | 0 | 0 | 1.618.154 | 2026-11-12 |
+
+*(Muestra truncada. En 4 órdenes el total difiere de M.O. + repuestos por ajustes a nivel de orden en CloudFleet — detectado por las validaciones.)
 
