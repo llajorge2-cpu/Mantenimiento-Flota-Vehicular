@@ -88,7 +88,6 @@ Defectos detectados y corregidos por las validaciones** (ciclo rojo → verde): 
 
 ![07_pipeline_arbol](07_pipeline_arbol.png)
 
-# APP O VISUALICACIONES 
 
  # VISUALIZACIONES - DATABRICKS
  
