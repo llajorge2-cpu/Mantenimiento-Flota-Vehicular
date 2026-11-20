@@ -18,3 +18,8 @@ Llevar a cabo una solución de Big Data a través de Databricks aplicando la arq
 Tener la visualización de la información casi que en tiempo real nos Permite:
 Almacén: revisar salida y entrada de repuestos, ver el comportamiento de la facturacion y hacer mejor control a los proveedores.
 Taller:
+
+# PIPELINE DE INGESTA DE DATOS
+Ingesta CloudFleet (notebook): 
+token nunca en texto plano, descarga paginada por ventanas de máximo 6 meses y respeto del rate limit del API:
+
